@@ -9,4 +9,10 @@ ff_df.info()
 
 counties = gpd.read_file('https://raw.githubusercontent.com/programminghistorian/jekyll/gh-pages/assets/choropleth-maps-python-folium/cb_2021_us_county_5m.zip')
 
+counties = counties.rename(columns={'GEOID':'FIPS'})
+
+counties[(counties['NAME']=='Suffolk') & (counties['STUSPS']=='MA')].plot()
+
+counties = counties[['FIPS','NAME','geometry']]
+
 counties.info()
