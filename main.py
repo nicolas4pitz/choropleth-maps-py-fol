@@ -6,3 +6,7 @@ import numpy as np
 ff_df = pd.read_csv('https://raw.githubusercontent.com/programminghistorian/jekyll/gh-pages/assets/choropleth-maps-python-folium/fatal-police-shootings-data.csv', parse_dates = ['date'])
 
 ff_df.info()
+
+counties = gpd.read_file('https://raw.githubusercontent.com/programminghistorian/jekyll/gh-pages/assets/choropleth-maps-python-folium/cb_2021_us_county_5m.zip')
+
+counties.info()
